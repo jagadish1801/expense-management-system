@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Management System</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+        <div id="screen"></div>
+        <div id="darkscreen"></div>
+        <div id="pop">
+            <div>
+            <label for="amount">Amount:</label><input class="ip i" type="number" step="1.00" id="amount" name="amount"></div>
+            <div><label for="type">Type:</label> <select class="ip i" name="type" id="type" >
+                <option >credit</option>
+                <option>debit</option>
+            </select></div>
+            <div>  <label for="remarks">Remarks:</label><input type="text" class="ip i" name="remark" id="remark"></div>
+            <input type="hidden" id="run" value="noedit">
+            <a id="close">submit</a>
+        </div>
+        <div id="login">
+            <h2>Login</h2>
+            <div><svg id="person" class="bi bi-person-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+              </svg></div>
+              
+            <div>
+            <label for="name">Name:</label><input id="name" class="ip i" type="text" name="name"></div>
+        <div> <label for="password">Password:</label><input id="password" class="ip i" type="password"></div>
+        <a id="loginclose">submit</a>
+        </div>
+
+    <nav>
+        <div >Expense Management System</div>
+        <div id="dispname"> welcome Mr.x </div>
+    </nav>
+    <div id="user-details">
+        <div id="circle">
+            <div id="profit">
+                <div class="percent" >
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle class="top" id="profittop" cx="70" cy="70" r="70"></circle>   
+                    </svg>
+                </div>
+                <div class="number"><h1 id="pronum">0<span class="per">%</span></h1></div>
+                <div class="text"> <H2>SAVINGS</H2></div>
+                
+            </div>
+            <div id="loss" >
+                <div class="percent" >
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle class="top" id="losstop" cx="70" cy="70" r="70"></circle>   
+                    </svg>
+                </div>
+                <div class="number"><h1 id="losnum">0<span class="per">%</span></h1></div>
+                <div class="text"> <H2>EXPENSE</H2></div>
+            </div>
+        </div>
+        <div id="details">
+            <!-- <h1 class="question" > TOTAL AMOUNT:<span id="totalam"> 0</span> INR</h1> -->
+            <h1 class="question" > INCOME:<span id="cre"> 0</span> INR</h1>
+            <h1 class="question" > Expense:<span id="deb"> 0</span> INR</h1>
+            <h1 class="question" > BALANCE:<span id="bal"> 0</span> INR</h1>
+        </div>
+    </div>
+    <div id="log">
+
+        <div id="heading" ><h1>DETAILS</h1> <div><svg id="add" class="bi bi-plus-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>
+            <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>
+            <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          </svg>
+        </div>
+    </div>
+    <div>
+        <table id="table" width='100%'>
+            <tr> <th>S.No</th> <th>Amount</th> <th>Type</th> <th>Remarks</th> <th> Balance </th> <th>Edit</th> <th>Delete</th> </tr>
+        </table>
+        </div>
+    </div>
+    <footer>
+        <div>Thanking You</div> <div>Designed By JAGADISH.S</div>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
